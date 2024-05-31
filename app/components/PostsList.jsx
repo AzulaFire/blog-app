@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import prisma from '@/app/utils/db';
-import Purify from './Purify';
 
 const PostsList = async () => {
   await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -29,9 +28,7 @@ const PostsList = async () => {
             Posted on {JSON.stringify(post.createdAt).substring(1, 11)} -{' '}
             {post.tag}
           </div>
-          <div className='my-4 text-justify'>
-            <Purify body={post.body.substring(0, 400)} />
-          </div>
+          <div className='my-4 text-justify'>post.body.substring(0, 400)</div>
         </div>
       ))}
     </div>
