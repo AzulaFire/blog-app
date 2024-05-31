@@ -28,7 +28,7 @@ const PostsList = async () => {
             Posted on {JSON.stringify(post.createdAt).substring(1, 11)} -{' '}
             {post.tag}
           </div>
-          <div className='my-4 text-justify'>post.body.substring(0, 400)</div>
+          <div className='my-4 text-justify'>{post.body.substring(0, 400)}</div>
         </div>
       ))}
     </div>
